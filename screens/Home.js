@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet, ImageBackground } from 'react-native'
-import Day from './Day'
+import React, { Component } from 'react';
+import { Text, View, StyleSheet,Image, ImageBackground } from 'react-native';
+import Day from './Day';
+import Card from './Card';
 export default class Home extends Component {
     state = {
         color: "darkslategray",
         activestate: "rgba(255, 255, 255, 0.291821)"
     }
+
+    change=()=>{
+        return (
+            this.props.navigation.navigate("Mission")
+        )
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -36,7 +44,20 @@ export default class Home extends Component {
                         <Text style={styles.textone}>My progress</Text>
                     </View>
                     <View style={styles.cards}>
-
+                    <Card 
+                    move="bounceInLeft"
+                    image={require("../assets/checkbox.png")}
+                    title="Mission"
+                    subtitle="85% completed"
+                    completed="85%" 
+                        screenchange={()=>this.props.change()}
+                    />
+                    <Card 
+                    move="bounceInRight"
+                    image={require("../assets/checktodo.png")}
+                    title="Completed"
+                    subtitle="75% completed"
+                    completed="75%" />
                     </View>
 
                 </View>

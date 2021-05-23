@@ -6,7 +6,8 @@ export default class Card extends Component {
   render() {
     return (
       <Animatable.View animation={this.props.animation} duration={1500} style={styles.cardone}>
-        <TouchableOpacity style={styles.box1}>
+        <TouchableOpacity style={styles.box1}
+        onPress={this.props.screenchange}>
           <View style={{ borderRadius: 21, backgroundColor: "rgba(255,19,134, 0.2)", height: "100%", flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Image source={this.props.Image} />
           </View>
@@ -31,3 +32,24 @@ export default class Card extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  cardone:{
+    flex:1,
+    marginBottom:15,
+    flexDirection:'row'
+  },
+  cardtwo:{
+    flex:1
+  },
+  box1:{
+    flex:1
+  },
+  box2:{
+    flex:1
+  },
+  box3:{
+    flex:1
+  },
+  
+})

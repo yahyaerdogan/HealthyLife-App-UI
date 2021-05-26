@@ -17,7 +17,7 @@ export default class Day extends Component {
 const styles = StyleSheet.create({
   box1: {
     flex: 1,
-    alignItems:"center",
-    justifyContent:"center"
+    alignItems: "center",
+    justifyContent: "center"
   }
 });

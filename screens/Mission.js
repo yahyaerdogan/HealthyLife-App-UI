@@ -36,16 +36,28 @@ export default class Home extends Component {
                                 background={require("../assets/graphtwo.png")}
                                 title="Netflix and Chill"
                                 month="Sep - Nov"
-                                
+
                             />
                             <Scroll bgcolor="#7dc9e7"
                                 background={require("../assets/graphtwo.png")}
                                 title="Video Games"
                                 month="Sep - Nov"
-                                
+
                             />
                         </ScrollView>
                     </View>
+                    <View style={styles.supportview} >
+                        <Text style={styles.support}>
+                            Support
+                        </Text>
+                    </View>
+                    <Animatable.View 
+                    animation="fadeInLeft"
+                    duration={1500}
+                    style={[styles.rectangleone], {shadowOffset:{width:100, height:100},shadowOpacity:1, elevation:30, backgroundColor:"#ffffff"}}
+                     >
+
+                    </Animatable.View>
                 </ScrollView>
             </View>
         )
@@ -74,6 +86,16 @@ const styles = StyleSheet.create({
         width: "100%",
         top: 160,
         marginLeft: 10
-
+    },
+    supportview:{
+        position:"absolute",
+        left:25,
+        top:420,
+    },
+    support:{
+        fontSize:25,
+        fontWeight:"bold",
+        letterSpacing:-0.5,
+        color:"#2E2E2E"
     }
 })
